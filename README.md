@@ -31,16 +31,16 @@ You can create the API key for accessing Google Generative AI using the followin
 
    bash
    git clone https://github.com/dokkujaswanthsagar/pdf-chatbot.git
-   cd pdf-Chatbot
+    cd pdf-Chatbot
    
 
-2. Install the required dependencies:
+3. Install the required dependencies:
 
    bash
    pip install -r requirements.txt
    
 
-3. Create a .env file in the root directory to protect the API key:
+4. Create a .env file in the root directory to protect the API key:
 
    bash
    .env
@@ -54,19 +54,19 @@ You can create the API key for accessing Google Generative AI using the followin
 
    Replace "YOUR_GOOGLE_API_KEY" with your actual Google Cloud API key.
 
-4. To set the API key for your environment, use the following command (Dont add the quotes for API Key):
+5. To set the API key for your environment, use the following command (Dont add the quotes for API Key):
 
    bash
    setx GOOGLE_API_KEY YOUR_GOOGLE_API_KEY
    
 
-5. Run the Streamlit app:
+6. Run the Streamlit app:
 
    bash
    streamlit run {Filename}.py
    
 
-6. Access the app through your browser at http://localhost:8501.
+7. Access the app through your browser at http://localhost:8501.
 
 ## Usage
 
