@@ -1,101 +1,98 @@
+Here’s the content formatted for a GitHub README file:
+
+---
+
 # PDF Chatbot using Google Generative AI and Streamlit
 
-This project is a *PDF Chatbot* that allows users to upload PDF documents and interact with the contents using a chatbot interface. The chatbot is powered by Google Generative AI, specifically the *Gemini 1.5 Pro* model, which generates responses based on user queries about the uploaded document. The web interface is built using *Streamlit*, which provides an intuitive and interactive platform for users to engage with the chatbot.
+This project provides a *PDF Chatbot* that enables users to upload PDF documents and interact with the contents using a chatbot interface. The chatbot is powered by *Google Generative AI* (Gemini 1.5 Pro model) and built using *Streamlit* for a seamless, interactive user experience.
 
 ## Features
 
-- *Upload and Interact with PDFs*: Users can upload PDF documents through the sidebar and start querying the contents of the document.
-- *Real-time Responses*: Powered by the Gemini 1.5 Pro model, the chatbot generates accurate and contextual answers to questions asked about the uploaded PDF.
-- *Chat History*: View all previous interactions in the chat history, ensuring users can track their questions and the corresponding responses.
-- *File Upload & Processing*: PDF files are securely uploaded and processed to extract relevant information for querying.
-- *Session State Management*: Keeps track of chat history during the session and allows users to clear it when needed.
-- *Stylish Interface*: A custom theme with a dark background, center-aligned titles, and a clean layout enhances the user experience.
+- *PDF Upload and Interaction*: Users can upload PDFs and ask questions about the document.
+- *Real-time Chat*: Leverages the Gemini 1.5 Pro model to generate accurate responses to queries about the uploaded document.
+- *Chat History*: Users can view all previous questions and answers, with an option to clear the history.
+- *Simple UI*: Clean, stylish interface with custom design elements like a dark background and centered headers.
 
 ## Prerequisites
 
-- *Python 3.x* installed on your machine.
-- A *Google Cloud API key* for the Google Generative AI model.
-- *Streamlit* for building the web interface.
+- *Python 3.x*
+- A *Google Cloud API key* to access the Google Generative AI model.
+- *Streamlit* installed for running the web app.
 
-## Creating the API Key
+## Setup
 
-You can create the API key for accessing Google Generative AI using the following steps:
+1. Clone this repository:
 
-- Visit this link: https://aistudio.google.com/app/apikey.
-- Click on Create API Key, and it will generate an API key for you.
-- Store the API key for use in the project as described below.
+    bash
+    git clone https://github.com/your-repository/pdf-chatbot.git
+    cd pdf-chatbot
+    
 
-## Setup Instructions
+2. Install dependencies:
 
-1. Clone the repository:
+    bash
+    pip install -r requirements.txt
+    
 
-   bash
-   git clone https://github.com/dokkujaswanthsagar/pdf-chatbot.git
-    cd pdf-Chatbot
-   
+3. Create a .env file in the root directory to securely store the API key:
 
-3. Install the required dependencies:
+    bash
+    touch .env
+    
 
-   bash
-   pip install -r requirements.txt
-   
+    Add your API key in this format:
 
-4. Create a .env file in the root directory to protect the API key:
+    
+    GOOGLE_API_KEY = "YOUR_GOOGLE_API_KEY"
+    
 
-   bash
-   .env
-   
+4. Set the API key in your environment:
 
-   In the .env file, include the following line:
+    bash
+    setx GOOGLE_API_KEY "YOUR_GOOGLE_API_KEY"
+    
 
-   
-   GOOGLE_API_TOKEN = "YOUR_GOOGLE_API_KEY"
-   
+5. Run the Streamlit app:
 
-   Replace "YOUR_GOOGLE_API_KEY" with your actual Google Cloud API key.
+    bash
+    streamlit run app.py
+    
 
-5. To set the API key for your environment, use the following command (Dont add the quotes for API Key):
-
-   bash
-   setx GOOGLE_API_KEY YOUR_GOOGLE_API_KEY
-   
-
-6. Run the Streamlit app:
-
-   bash
-   streamlit run {Filename}.py
-   
-
-7. Access the app through your browser at http://localhost:8501.
+6. Access the app on your browser at http://localhost:8501.
 
 ## Usage
 
-1. *Upload a PDF*: Use the sidebar to upload a PDF document. Once uploaded, the file will be processed, and you can begin asking questions.
-   
-2. *Ask a Question*: Input your query into the text box. The chatbot will respond with information extracted from the PDF.
-   
-3. *Chat History*: View all previous questions and responses under the "Chat History" section. Clear the history if needed by clicking the "Clear Chat History" button.
-
-4. *Save Conversations*: The chat history is automatically saved to a text file named chat_history.txt for reference.
+1. *Upload a PDF*: Use the sidebar to upload a PDF document.
+2. *Ask a Question*: Input your query into the chatbox. The chatbot will respond based on the contents of the PDF.
+3. *Chat History*: All interactions are displayed in the "Chat History" section, with an option to clear the history.
+4. *Save Conversations*: Chat history is saved automatically in a file named chat_history.txt.
 
 ## Example
 
-- Upload a document like sample.pdf.
-- Ask questions such as, “What is the main topic of the document?” or “Summarize section 2.”
-- The chatbot will provide answers based on the document’s contents.
+- Upload sample.pdf.
+- Ask questions like "What is the main topic of the document?" or "Summarize section 2."
+- The chatbot will analyze the PDF and provide relevant answers.
 
-## File Structure
+## Project Structure
 
 
 .
-├── Chatbot.py             # Main Streamlit app file
-├── .env                   # Environment file for storing the API key
-├── requirements.txt       # Python dependencies
-└── chat_history.txt       # Chat history file generated during session
+├── app.py                 # Main app file
+├── .env                   # Environment file for API key
+├── requirements.txt        # List of dependencies
+└── chat_history.txt        # Generated chat history file
 
 
-## Technologies Used
+## Technologies
 
-- *Google Generative AI (Gemini 1.5 Pro)*: Generates responses based on user queries.
-- *Streamlit*: Web framework for creating the user interface.
-- *Python*: Core programming language used for backend logic and integration.
+- *Google Generative AI (Gemini 1.5 Pro)*: The AI model used for generating responses.
+- *Streamlit*: Framework for building the user interface.
+- *Python*: The programming language used for backend logic.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Let me know if you need further changes or additional details!
