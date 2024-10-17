@@ -27,7 +27,7 @@ You can create the API key for accessing Google Generative AI using the followin
 
 ## Setup Instructions
 
-1. Clone the repository:
+1. Clone the repository: Run the below command in command prompt
 
    ```bash
    git clone https://github.com/your-repository/pdf-chatbot.git
